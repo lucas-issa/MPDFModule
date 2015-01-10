@@ -17,7 +17,7 @@ class MpdfRender implements Renderer
     private $resolver = null;
     private $htmlRenderer = null;
     
-    public function setHtmlRender(Renderer $renderer)
+    public function setHtmlRenderer(Renderer $renderer)
     {
         $this->htmlRenderer = $renderer;
         return $this;

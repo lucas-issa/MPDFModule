@@ -2,6 +2,7 @@
     "name": "barao/mpdf-module",
     "type": "library",
     "description": "Suporte a utilização MPDF no zend Framework 2.",
+    "version": "1.0.0",
     "keywords": ["pdf","mpdf", "zf2"],
     "homepage": "https://github.com/Thallison",
     "authors": [
