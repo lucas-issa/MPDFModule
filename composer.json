@@ -4,7 +4,6 @@
     "description": "Suporte a utilização MPDF no zend Framework 2.",
     "keywords": ["pdf","mpdf", "zf2"],
     "homepage": "https://github.com/Thallison",
-    "license": "MIT",
     "authors": [
         {
         "name": "Thallison Morais",
