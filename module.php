@@ -5,8 +5,4 @@
  * @version 1.0
  */
 
-namespace MPDFModule;
-
-return array(
-    
-);
+require_once __DIR__ . '/src/MPDFModule/Module.php';
