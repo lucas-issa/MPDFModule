@@ -3,6 +3,8 @@ MPDFModule
 
 Módulo para geração de PDF no zend framework2 utilizando o mpdf.
 
+A instalação de MPDFModule utiliza o PHP Composer. Para mais informações sobre PHP Composer, por favor visite o site oficial [PHP Composer](http://getcomposer.org/).
+
 ## Requerimentos
   - [Zend Framework 2](http://www.github.com/zendframework/zf2)
 
