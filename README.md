@@ -40,6 +40,5 @@ class IndexController extends AbstractActionController
     {
         return new MpdfModel();
     }
-    
 }
 ```
