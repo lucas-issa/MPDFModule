@@ -23,3 +23,23 @@ Módulo para geração de PDF no zend framework2 utilizando o mpdf.
      ```php
      'MPDFModule',
      ```
+
+## Exemplo de utilização
+
+```php
+<?php
+
+namespace Application\Controller;
+
+use Zend\Mvc\Controller\AbstractActionController;
+use MPDFModule\View\Model\MpdfModel;
+
+class IndexController extends AbstractActionController
+{
+    public function indexAction()
+    {
+        return new MpdfModel();
+    }
+    
+}
+```
