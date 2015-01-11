@@ -1,9 +1,9 @@
 MPDFModule
 ============
 
-Modulo para geração de PDF no zend framework2 utilizando o mpdf.
+Módulo para geração de PDF no zend framework2 utilizando o mpdf.
 
-## Requirements
+## Requerimentos
   - [Zend Framework 2](http://www.github.com/zendframework/zf2)
 
 #### Instalação
@@ -18,7 +18,7 @@ Modulo para geração de PDF no zend framework2 utilizando o mpdf.
      }
      ```
   2. Atualize o composer com o comando php composer.phar update ou composer.phar install
-  3. Adicione no arquivo `config/application.config.php` onde registra os `modulos`: 
+  3. Adicione no arquivo `config/application.config.php` onde registra os `módulos`: 
 
      ```php
      'MPDFModule',
