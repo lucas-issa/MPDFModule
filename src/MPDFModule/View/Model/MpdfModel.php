@@ -16,7 +16,7 @@ class MpdfModel extends ViewModel
      */
     protected $options = array(
         'paperSize' => 'A4',
-        'paperOrientation' => 'portrait',
+        'paperOrientation' => 'portrait', //landscape
         'basePath' => '/',
         'fileName' => null
     );

@@ -52,11 +52,14 @@ class MpdfRender implements Renderer
         
         $paperSize = $model->getOption('paperSize');
         $paperOrientation = $model->getOption('paperOrientation');
-        $basePath = $model->getOption('basePath');
+        
+        $format = substr($paperOrientation, 0, 1);
+        if($format == 'l'){
+            $paperSize = $paperSize.'-'.$format;
+        }
         
         $mpdf = $this->getEngine();
-        //$mpdf->set_paper($paperSize, $paperOrientation);
-        //$mpdf->set_base_path($basePath);
+        $mpdf->_setPageSize($paperSize, $paperOrientation);
         
         // escreve o conteudo no PDF
         $mpdf->WriteHTML($html);
