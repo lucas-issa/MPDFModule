@@ -41,8 +41,8 @@ class IndexController extends AbstractActionController
     public function indexAction()
     {
         $mpdf = new MpdfModel();
-        $pdf->setOption('paperSize', 'A3'); // padrão "A4"
-        $pdf->setOption('paperOrientation', 'landscape'); // Padrão "portrait"
+        $mpdf->setOption('paperSize', 'A3'); // padrão "A4"
+        $mpdf->setOption('paperOrientation', 'landscape'); // Padrão "portrait"
         return $mpdf;
     }
 }
