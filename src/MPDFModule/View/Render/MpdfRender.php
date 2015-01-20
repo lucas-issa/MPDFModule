@@ -52,6 +52,7 @@ class MpdfRender implements Renderer
         
         $paperSize = $model->getOption('paperSize');
         $paperOrientation = $model->getOption('paperOrientation');
+        $file_name = $model->getOption('fileName');
         
         $format = substr($paperOrientation, 0, 1);
         if($format == 'l'){
@@ -65,7 +66,7 @@ class MpdfRender implements Renderer
         $mpdf->WriteHTML($html);
         
         //Imprime o pdf
-        return $mpdf->Output();
+        return $mpdf->Output($file_name);
     }
 
     public function setResolver(Resolver $resolver)
