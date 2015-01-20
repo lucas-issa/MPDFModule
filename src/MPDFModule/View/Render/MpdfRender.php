@@ -66,7 +66,7 @@ class MpdfRender implements Renderer
         $mpdf->WriteHTML($html);
         
         //Imprime o pdf
-        return $mpdf->Output();
+        return $mpdf->Output($file_name);
     }
 
     public function setResolver(Resolver $resolver)
