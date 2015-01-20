@@ -18,7 +18,7 @@ class MpdfModel extends ViewModel
         'paperSize' => 'A4',
         'paperOrientation' => 'portrait', //landscape
         'basePath' => '/',
-        'fileName' => null
+        'fileName' => 'Relatório'
     );
     
     /**

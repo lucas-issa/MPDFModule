@@ -52,6 +52,7 @@ class MpdfRender implements Renderer
         
         $paperSize = $model->getOption('paperSize');
         $paperOrientation = $model->getOption('paperOrientation');
+        $file_name = $model->getOption('fileName');
         
         $format = substr($paperOrientation, 0, 1);
         if($format == 'l'){
