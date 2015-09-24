@@ -62,7 +62,6 @@ class MpdfRender implements Renderer
 
         $mpdf = $this->getEngine();
         $mpdf->_setPageSize($paperSize, $paperOrientation);
-        $mpdf->
 
         // escreve o conteudo no PDF
         $mpdf->WriteHTML($html);
