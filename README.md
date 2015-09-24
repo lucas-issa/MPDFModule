@@ -15,12 +15,12 @@ A instalação do MPDFModule utiliza o PHP Composer. Para mais informações sob
      ```json
      {
          "require": {
-             "barao/mpdf-module": "dev-master"
+             "lucraraujo/mpdf-module": "dev-master"
          }
      }
      ```
   2. Atualize o composer com o comando php composer.phar update ou composer.phar install
-  3. Adicione no arquivo `config/application.config.php` onde registra os `módulos`: 
+  3. Adicione no arquivo `config/application.config.php` onde registra os `módulos`:
 
      ```php
      'MPDFModule',
