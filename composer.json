@@ -1,14 +1,14 @@
 {
-    "name": "barao/mpdf-module",
+    "name": "lucraraujo/mpdf-module",
     "type": "library",
     "description": "Suporte a utilização MPDF no zend Framework 2.",
     "version": "1.0.0",
     "keywords": ["pdf","mpdf", "zf2"],
-    "homepage": "https://github.com/Thallison",
+    "homepage": "https://github.com/lucraraujo",
     "authors": [
         {
-        "name": "Thallison Morais",
-        "email": "thallisonmorais@gmail.com"
+        "name": "Lucas Araujo",
+        "email": "lucraraujo@gmail.com"
         }
     ],
     "minimum-stability": "dev",

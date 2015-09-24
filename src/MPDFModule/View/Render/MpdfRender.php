@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @author Thallison Morais <thallisonmorais@gmail.com>
+ * @author Lucas Araujo <lucraraujo@gmail.com>
  * @version 1.0
  */
 
@@ -16,29 +16,29 @@ class MpdfRender implements Renderer
     private $mpdf = null;
     private $resolver = null;
     private $htmlRenderer = null;
-    
+
     public function setHtmlRenderer(Renderer $renderer)
     {
         $this->htmlRenderer = $renderer;
         return $this;
     }
-    
+
     public function getHtmlRenderer()
     {
         return $this->htmlRenderer;
     }
-    
+
     public function setEngine(mPDF $mpdf)
     {
         $this->mpdf = $mpdf;
         return $this;
     }
-    
+
     public function getEngine()
     {
         return $this->mpdf;
     }
-    
+
     /**
      * Renders values as a PDF
      *
@@ -49,24 +49,30 @@ class MpdfRender implements Renderer
     public function render($model, $values = null)
     {
         $html = $this->getHtmlRenderer()->render($model, $values);
-        
+
         $paperSize = $model->getOption('paperSize');
         $paperOrientation = $model->getOption('paperOrientation');
-        $file_name = $model->getOption('fileName');
-        
+        $fileName = $model->getOption('fileName');
+        $destination = $model->getOption('destination');
+
         $format = substr($paperOrientation, 0, 1);
         if($format == 'l'){
             $paperSize = $paperSize.'-'.$format;
         }
-        
+
         $mpdf = $this->getEngine();
         $mpdf->_setPageSize($paperSize, $paperOrientation);
-        
+        $mpdf->
+
         // escreve o conteudo no PDF
         $mpdf->WriteHTML($html);
-        
-        //Imprime o pdf
-        return $mpdf->Output();
+
+        if (isset($fileName)) {
+            if (substr($fileName, -4) != '.pdf') {
+                $fileName .= '.pdf';
+            }
+        }
+        return $mpdf->Output($fileName, $destination);
     }
 
     public function setResolver(Resolver $resolver)

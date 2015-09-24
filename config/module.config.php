@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @author Thallison Morais <thallisonmorais@gmail.com>
+ * @author Lucas Rafael Araujo Andrade<lucraraujo@gmail.com>
  * @version 1.0
  */
 
@@ -23,4 +23,5 @@ return array(
             'ViewMpdfStrategy' => __NAMESPACE__ . '\Model\ViewMpdfStrategy',
         )
     ),
+
 );

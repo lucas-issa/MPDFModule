@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @author Thallison Morais <thallisonmorais@gmail.com>
+ * @author Lucas Araujo <lucraraujo@gmail.com>
  * @version 1.0
  */
 
@@ -73,7 +73,7 @@ class MpdfStrategy implements ListenerAggregateInterface
     public function selectRenderer(ViewEvent $e)
     {
         $model = $e->getModel();
-        
+
         if ($model instanceof Model\MpdfModel) {
             return $this->renderer;
         }
@@ -101,20 +101,9 @@ class MpdfStrategy implements ListenerAggregateInterface
             // @todo Potentially throw an exception here since we should *always* get back a result.
             return;
         }
-        
+
         $response = $e->getResponse();
         $response->setContent($result);
         $response->getHeaders()->addHeaderLine('content-type', 'application/pdf');
-        
-        $fileName = $e->getModel()->getOption('filename');
-        if (isset($fileName)) {
-            if (substr($fileName, -4) != '.pdf') {
-                $fileName .= '.pdf';
-            }
-            
-            $response->getHeaders()->addHeaderLine(
-            	'Content-Disposition', 
-            	'attachment; filename=' . $fileName);
-        }
     }
 }

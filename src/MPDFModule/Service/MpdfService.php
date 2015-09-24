@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @author Thallison Morais <thallisonmorais@gmail.com>
+ * @author Lucas Araujo <lucraraujo@gmail.com>
  * @version 1.0
  */
 

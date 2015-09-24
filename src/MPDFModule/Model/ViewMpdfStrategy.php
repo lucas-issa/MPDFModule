@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @author Thallison Morais <thallisonmorais@gmail.com>
+ * @author Lucas Araujo <lucraraujo@gmail.com>
  * @version 1.0
  */
 
@@ -15,14 +15,14 @@ class ViewMpdfStrategy implements FactoryInterface
 {
     /**
      *
-     * @param  ServiceLocatorInterface $serviceLocator 
+     * @param  ServiceLocatorInterface $serviceLocator
      * @return mpdfStrategy
      */
     public function createService(ServiceLocatorInterface $serviceLocator)
     {
         $mpdfRenderer = $serviceLocator->get('ViewMpdfRender');
         $mpdfStrategy = new MpdfStrategy($mpdfRenderer);
-        
+
         return $mpdfStrategy;
     }
 }
