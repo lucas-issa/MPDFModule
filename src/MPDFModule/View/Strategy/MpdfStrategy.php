@@ -101,9 +101,13 @@ class MpdfStrategy implements ListenerAggregateInterface
             // @todo Potentially throw an exception here since we should *always* get back a result.
             return;
         }
-
         $response = $e->getResponse();
         $response->setContent($result);
-        $response->getHeaders()->addHeaderLine('content-type', 'application/pdf');
+        if ($e->getModel()->getOptions()['debug']) {
+            $response->getHeaders()->addHeaderLine('content-type', 'text/html');
+        }
+        else {
+            $response->getHeaders()->addHeaderLine('content-type', 'application/pdf');
+        }
     }
 }

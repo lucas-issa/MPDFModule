@@ -38,6 +38,7 @@ class MpdfModel extends ViewModel
         'basePath' => '/',
         'fileName' => 'pdf',
         'destination' => self::DESTINO_DOWNLOAD_NAVEGADOR,
+        'debug' => false,
     );
     
     /**
