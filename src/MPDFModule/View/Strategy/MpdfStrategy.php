@@ -21,14 +21,14 @@ class MpdfStrategy implements ListenerAggregateInterface
     protected $listeners = array();
 
     /**
-     * @var PdfRenderer
+     * @var MpdfRender
      */
     protected $renderer;
 
     /**
      * Constructor
      *
-     * @param  PdfRenderer $renderer
+     * @param  MpdfRender $renderer
      * @return void
      */
     public function __construct(MpdfRender $renderer)

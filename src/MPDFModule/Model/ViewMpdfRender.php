@@ -25,8 +25,8 @@ class ViewMpdfRender implements FactoryInterface
         $mpdfRenderer = new MpdfRender();
         $mpdfRenderer->setResolver($viewManager->getResolver());
         $mpdfRenderer->setHtmlRenderer($viewManager->getRenderer());
-        $mpdfRenderer->setEngine($serviceLocator->get('mpdf'));
-        
+        $mpdfRenderer->setEngine($serviceLocator->get('MpdfService'));
+
         return $mpdfRenderer;
     }
 }

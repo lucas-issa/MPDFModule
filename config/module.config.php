@@ -15,13 +15,24 @@ return array(
     ),
     'service_manager' => array(
         'shared' => array(
-            'MPDF' => false
+            'MpdfService' => false
         ),
         'factories' => array(
-            'MPDF'          => __NAMESPACE__ . '\Service\MpdfService',
+            'LazyServiceFactory' => 'Zend\ServiceManager\Proxy\LazyServiceFactoryFactory',
+            'MpdfService'          => __NAMESPACE__ . '\Service\MpdfService',
             'ViewMpdfRender' => __NAMESPACE__ . '\Model\ViewMpdfRender',
             'ViewMpdfStrategy' => __NAMESPACE__ . '\Model\ViewMpdfStrategy',
-        )
+        ),
+        'delegators' => [
+            'ViewMpdfRender' => ['LazyServiceFactory'],
+        ],
     ),
+    'lazy_services'   => [
+        'class_map' => [
+            'ViewMpdfRender' => __NAMESPACE__ . '\View\Render\MpdfRender',
+        ],
+//        'proxies_target_dir' => 'data/cache/servicesProxies',
+//        'write_proxy_files' => true,
+    ],
 
 );
