@@ -1,10 +1,10 @@
 {
-    "name": "lucraraujo/mpdf-module",
+    "name": "lucas.issa/mpdf-module",
     "type": "library",
     "description": "Suporte a utilização MPDF no zend Framework 2.",
     "version": "1.0.0",
     "keywords": ["pdf","mpdf", "zf2"],
-    "homepage": "https://github.com/lucraraujo",
+    "homepage": "https://github.com/lucas-issa/MPDFModule",
     "authors": [
         {
         "name": "Lucas Araujo",

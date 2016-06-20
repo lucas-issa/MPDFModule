@@ -15,7 +15,7 @@ A instalação do MPDFModule utiliza o PHP Composer. Para mais informações sob
      ```json
      {
          "require": {
-             "lucraraujo/mpdf-module": "dev-master"
+             "lucas.issa/mpdf-module": "dev-master"
          }
      }
      ```
