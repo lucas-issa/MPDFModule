@@ -1,5 +1,5 @@
 {
-    "name": "lucas.issa/mpdf-module",
+    "name": "lucas-issa/mpdf-module",
     "type": "library",
     "description": "Suporte a utilização MPDF no zend Framework 2.",
     "version": "1.0.0",
