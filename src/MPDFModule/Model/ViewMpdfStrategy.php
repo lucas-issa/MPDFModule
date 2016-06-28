@@ -7,9 +7,14 @@
 
 namespace MPDFModule\Model;
 
+use MPDFModule\Service\MpdfService;
 use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 use MPDFModule\View\Strategy\MpdfStrategy;
+
+define("_MPDF_TEMP_PATH", MpdfService::TEMP_DIR);
+define("_MPDF_TTFONTDATAPATH", MpdfService::TTFONTDATA_DIR);
+define("_JPGRAPH_PATH", MpdfService::JPGRAPH_DIR);
 
 class ViewMpdfStrategy implements FactoryInterface
 {
