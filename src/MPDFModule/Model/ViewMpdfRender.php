@@ -10,6 +10,8 @@ namespace MPDFModule\Model;
 use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 use MPDFModule\View\Render\MpdfRender;
+use Zend\View\Renderer\RendererInterface;
+use Zend\View\Resolver\ResolverInterface;
 
 class ViewMpdfRender implements FactoryInterface
 {
@@ -20,11 +22,15 @@ class ViewMpdfRender implements FactoryInterface
      */
     public function createService(ServiceLocatorInterface $serviceLocator)
     {
-        $viewManager = $serviceLocator->get('ViewManager');
-        
+//        $viewManager = $serviceLocator->get('ViewManager');
+        /** @var ResolverInterface $viewResolver */
+        $viewResolver = $serviceLocator->get('ViewResolver');
+        /** @var RendererInterface $viewRenderer */
+        $viewRenderer = $serviceLocator->get('ViewRenderer');
+
         $mpdfRenderer = new MpdfRender();
-        $mpdfRenderer->setResolver($viewManager->getResolver());
-        $mpdfRenderer->setHtmlRenderer($viewManager->getRenderer());
+        $mpdfRenderer->setResolver($viewResolver);
+        $mpdfRenderer->setHtmlRenderer($viewRenderer);
         $mpdfRenderer->setEngine($serviceLocator->get('MpdfService'));
 
         return $mpdfRenderer;
